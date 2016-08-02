@@ -3,6 +3,10 @@ header{
   padding-bottom: 50px;
 }
 
+body{
+  background-image: url('pic5.jpg');
+}
+
 h1 {
   text-align: center;
 }
