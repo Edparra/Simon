@@ -17,11 +17,9 @@ start: function(){
 },
 
 newRound: function() {
-$('[data-round]').text(++this.round);
-this.randoPad();
-this.displayLevel();
-
-
+  ++this.round;
+  this.randoPad();
+  this.displayLevel();
 },
 
 flash :function($element) {
@@ -30,8 +28,7 @@ flash :function($element) {
 
     console.log('clip:', clip);
     $('#beep'+clip)[0].play();
-  //  game.clipper.push(clip);
- // console.log('TODO: make flash happen for element:', element);
+
     setTimeout(function()
                {
                 $element.removeClass('opClass')
@@ -40,14 +37,13 @@ flash :function($element) {
              );
 },
 
-
-/*compyBoomin: function(){
-  $('#beep'+flash.clip)[0].play();
-},*/
 randoPad: function() {
    this.compyClicks.push(Math.floor(Math.random() * 4) + 1);
    console.log('compyClicks:', this.compyClicks);
-   this.showSequence();
+   var that = this;
+   setTimeout(function() {
+     that.showSequence();
+   }, 1000);
 },
 checkClicks: function(element){
    var clip = element.attr('data-tile');
@@ -56,12 +52,13 @@ checkClicks: function(element){
     this.compyClicks=[];
     this.counter=0;
     alert("Nope! You're wrong");
- }
- else if (this.compyClicks.length - 1 == this.counter){
-  this.newRound();
-  this.counter=0;
- }
- else {
+  }
+  else if (this.compyClicks.length - 1 == this.counter){
+    this.newRound();
+      this.counter=0;
+    }
+  else {
+
   this.counts()
  }
 
