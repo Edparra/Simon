@@ -12,6 +12,21 @@ h1 {
  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
+.butts {
+  z-index: 5;
+  position:relative;
+}
+/*.circle {
+ position: absolute;
+  top: 250px;
+  left: 545px;
+  width: 175px;
+  height: 175px;
+  background: #000;
+  border-radius: 125px;
+  z-index: 10;
+}*/
+
 .side {
   padding: 0;
   margin: 0;
@@ -26,6 +41,7 @@ width:300px;
 height:300px;
 margin: 0 auto;
  padding: 0;
+
 
 }
 .side{

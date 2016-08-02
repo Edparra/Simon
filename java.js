@@ -7,7 +7,7 @@ var game = {
           compyClicks : [],
        //   copy : [],
           counter : 0,
-        //  clipper : [],
+
 
 start: function(){
   this.compyClicks=[];
@@ -42,7 +42,7 @@ randoPad: function() {
    console.log('compyClicks:', this.compyClicks);
    var that = this;
    setTimeout(function() {
-     that.showSequence();
+     that.showSequence()
    }, 1000);
 },
 checkClicks: function(element){
