@@ -14,18 +14,18 @@ h1 {
 
 .butts {
   z-index: 5;
-  position:relative;
+  position:absolute;
 }
-/*.circle {
+.circle {
  position: absolute;
-  top: 250px;
-  left: 545px;
+  top: 66px;
+  left: 63px;
   width: 175px;
   height: 175px;
-  background: #000;
+  background: black;
   border-radius: 125px;
   z-index: 10;
-}*/
+}
 
 .side {
   padding: 0;
@@ -41,8 +41,7 @@ width:300px;
 height:300px;
 margin: 0 auto;
  padding: 0;
-
-
+ position:relative;
 }
 .side{
   width:150px;
@@ -84,10 +83,14 @@ margin: 0 auto;
 }
 
 .start {
-  width: 50%;
+
+  width: 20%;
   height: 40px;
   text-align: center;
   margin: 40px;
+}
+.startB, .round {
+  text-align: center;
 }
 
 
