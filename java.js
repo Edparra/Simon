@@ -53,7 +53,7 @@ checkClicks: function(element){ //compares each click to compyClicks
     this.compyClicks=[];
     this.counter=0;
     $('#lose')[0].play();
-    alert("Oops! You messed up..");
+    alert("Oops! You messed up...Hit start to try again");
   }
   else if (this.compyClicks.length - 1 == this.counter){
     this.newRound();   //checks if sequence is finished before running newRound
