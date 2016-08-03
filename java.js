@@ -10,7 +10,6 @@ var game = {
 
 start: function(){  //starts game, sets compyClicks and round  to 0
   this.compyClicks=[];
-  // copy=[];
   this.round=0;
   this.newRound();
 },
@@ -42,14 +41,19 @@ randoPad: function() {  //adds random number to compyClicks
    setTimeout(function() {  //waits a second before it showSequence again
      that.showSequence()
    }, 1000);
+
+
+
 },
 checkClicks: function(element){ //compares each click to compyClicks
    var clip = element.attr('data-tile'); //gets clip last click (#1-4)
+  // var sadSound = new Audio ("sounds/lose.mp3")
   if (clip != this.compyClicks[this.counter]){ //compares clip with corrent number in compyClicks
     this.round=0; //if the input is wrong, the game sets back to 0 and alert player
     this.compyClicks=[];
     this.counter=0;
-    alert("Nope! You're wrong");
+    $('#lose')[0].play();
+    alert("Oops! You messed up..");
   }
   else if (this.compyClicks.length - 1 == this.counter){
     this.newRound();   //checks if sequence is finished before running newRound
@@ -83,6 +87,8 @@ showSequence: function(){  //gets pad and index for showSequencePad
 displayLevel: function(){ //displays Round
   $('.round h2').text('Round:' +this.round);
 },
+
+
 
 }
 
