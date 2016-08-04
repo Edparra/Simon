@@ -23,5 +23,5 @@ the game last forever so don't expect to beat it
 -twitter bootstrap
 -jQuery
 
-###play game
+####play game:
 http://veterinarian-alvin-50881.bitballoon.com/
